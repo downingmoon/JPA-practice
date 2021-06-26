@@ -1,0 +1,6 @@
+# Login Controller
+POST http://localhost/login
+Content-Type: application/x-www-form-urlencoded
+
+userId=test&userPassword=1234
+
