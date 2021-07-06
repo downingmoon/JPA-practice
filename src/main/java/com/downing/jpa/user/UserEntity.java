@@ -9,12 +9,14 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Table(name = "MD_USER")
-public class UserEntity extends CommonEntity {
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userNo;
     private String userId;
     private String userPassword;
+    private String userProfileImg;
+    private String userName;
 
     @Builder
     public UserEntity(Long userNo, String userId, String userPassword) {
