@@ -10,6 +10,11 @@ spring:
     properties:
       hibernate:
         format_sql: true
+      naming:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: com.downing.jpa.common.model.config.CustomNamingStrategy
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: "jdbc:mariadb://everypick.co.kr:3306/everypick?autoReconnect=true&serverTimezone=UTC"
@@ -19,4 +24,7 @@ spring:
       connection-test-query: SELECT 1
       minimum-idle: 10
       maximum-pool-size: 50
+  devtools:
+    livereload:
+      enabled: true
 

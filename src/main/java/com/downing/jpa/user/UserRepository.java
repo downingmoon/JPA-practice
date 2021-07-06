@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
     /**
      * UserId 로 회원 조회
-     * @param userEntity
+     * @param userId
      * @return
      */
     UserEntity findByUserId(String userId);
