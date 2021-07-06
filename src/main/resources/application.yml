@@ -6,3 +6,17 @@ spring:
     active: local
   jpa:
     show-sql: true
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: "jdbc:mariadb://everypick.co.kr:3306/everypick?autoReconnect=true&serverTimezone=UTC"
+    username: everypick
+    password: q1020304050
+    hikari:
+      connection-test-query: SELECT 1
+      minimum-idle: 10
+      maximum-pool-size: 50
+
